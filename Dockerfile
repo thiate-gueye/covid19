@@ -6,4 +6,4 @@ RUN mvn clean package -Pprod -DskipTests
 FROM openjdk:8-jdk-slim
 COPY --from=build /target/covid.jar covid.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "pgsenpa.jar"]
+ENTRYPOINT ["java", "-jar", "covid.jar"]
